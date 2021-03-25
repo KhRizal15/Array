@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.example;
+
+import java.util.Scanner;
+
+public class ComputeAvg {
+
+    public static void main(String args[]) {
+        Scanner input = new Scanner(System.in);    
+        System.out.println("Masukkan panjang Array : ");
+        int panjangArray = input.nextInt();
+        
+        int[] score = new int[panjangArray];        
+        System.out.println("Masukkan Angka : ");
+        for(int i = 0; i < score.length; i++) {
+            score[i] = input.nextInt();
+        }
+        
+        System.out.println("---------------");
+        
+        int total = 0;
+        
+        for(int j = 0; j < score.length; j++){
+            System.out.println(score[j]);
+            total = total + score[j];           
+        }     
+        System.out.print("Total : ");
+        System.out.println(total);
+        
+        double avg = (double) total / (double) score.length;
+        
+        System.out.println("Rata ratanya adalah : "+avg);
+    }
+}
